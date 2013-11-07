@@ -5,8 +5,7 @@
 	   <head>
 	      <title>Register Page</title>
   
-        <style type="text/css">
-		
+        <style type="text/css">		
 			body
 			{
 				background: #250d0b url(templatemo_bg.jpg) top repeat-x ;
@@ -18,7 +17,6 @@
             	margin: 0 0 10px 0;
             	font-size: 16px;
             	color: #fbbc53;
-            	font-weight: bold;
             }
         }</style>
 
@@ -28,67 +26,27 @@
 	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	  <link rel="stylesheet" href="/resources/demos/style.css" />
-	  
-	  <script src="js/jquery.min.js"></script>
-		<script src="js/myscript.js"></script>
-
-	  <script>
-	  $(function() {
-		$( "#tabs" ).tabs();
-	  });
-	  
-	  </script>
 	  <link rel="stylesheet" href="style_v1.css"> 
 	  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	  		<script type="text/javascript">
- 		$(document).ready(function() {  
-  
-        //the min chars for username  
-        var min_chars = 3;  
-  
-        //result texts  
-        var characters_error = 'Minimum amount of chars is 3';  
-        var checking_html = 'Checking...';  
-  
-        //when button is clicked  
-        $('#check_username_availability').click(function(){  
-            //run the character number check  
-            if($('#username').val().length < min_chars){  
-                //if it's bellow the minimum show characters_error text '  
-                $('#username_availability_result').html(characters_error);  
-            }else{  
-                //else show the cheking_text and run the function to check  
-                $('#username_availability_result').html(checking_html);  
-                check_availability();  
-            }  
-        });  
-  
-  });  
-  
-//function to check username availability  
-function check_availability(){  
-  
-        //get the username  
-        var username = $('#username').val();  
-  
-        //use ajax to run the check  
-        $.post("check_username.php", { username: username },  
-            function(result){  
-                //if the result is 1  
-                if(result == 1){  
-                    //show that the username is available  
-                    $('#username_availability_result').html(username + ' is Available');  
-                }else{  
-                    //show that the username is NOT available  
-                    $('#username_availability_result').html(username + ' is not Available');  
-                }  
-        });  
-  
-} 
-</script>
- 
-  
+	  <script src="js/jquery.min.js"></script>
+
+	  <script>
+		  $(function() {
+			$( "#tabs" ).tabs();
+		  });
+	  </script>
+	  
+		<script>
+			$(document).ready(function(){
+			  $("input").blur(function(){
+				$.get("phpanswerserver.php?yusuf",function(data,status){
+				  alert("Data: " + data + "\nStatus: " + status);
+				});
+			  });
+			});
+		</script>
 	   </head>
+	   
 	   <body class = "header_01">
 		
 		<div style="width:500px; margin:auto; padding:auto" id="tabs">
@@ -153,7 +111,6 @@ function check_availability(){
 			  </form>
 		  </div>
 		</div>
-
 
 	   </body>
 	</html>
