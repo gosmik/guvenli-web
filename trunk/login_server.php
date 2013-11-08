@@ -7,7 +7,7 @@ $userList=mysqli_query($connect,"SELECT * from user WHERE (user_name='" . $_POST
   {
 	if(mysqli_num_rows($userList)>0)
 	{
-		echo "login is OK";
+		echo "Welcome ". $_POST['username'];
 	}
 	else
 	{
