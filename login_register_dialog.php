@@ -21,14 +21,11 @@
         }</style>
 
 	  <meta charset="utf-8" />
-	  <title>jQuery UI Tabs - Default functionality</title>
 	  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	  <link rel="stylesheet" href="/resources/demos/style.css" />
 	  <link rel="stylesheet" href="style_v1.css"> 
 	  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	  <script src="js/jquery.min.js"></script>
 
 	  <script>
 		  $(function() {
@@ -39,7 +36,7 @@
 		<script>
 			$(document).ready(function(){
 			  $("#username").blur(function(){
-				$.get("phpanswerserver.php?data="+$("#username").val(),function(data,status){
+				$.get("register_server.php?data="+$("#username").val(),function(data,status){
 				  alert(data);
 				});
 			  });
@@ -89,7 +86,7 @@
 		  
 		  <div id="tabs-2">
 			  <!-- post form data to save_to_db.php -->
-			  <form method = "post" action = "save_to_db.php">
+			  <form method = "post" action = "login_server.php">
 				 <div >
 					<header_01 >fill in the blank </sheader_01>
 					<!-- create four text boxes for user input -->   

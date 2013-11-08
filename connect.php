@@ -7,6 +7,6 @@ $m_Db = "project_v1";
 
 //Code for connection: 
 $connect = mysqli_connect("","root","root","project_v1");
-echo '<b style="color:#298A08;">Connected to MYSQL!</b>'; 
 
+//echo "<b>Connected to MYSQL! </b>"; 
 ?>

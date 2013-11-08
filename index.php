@@ -20,8 +20,8 @@
 	</div>
 	<nav>
 	<ul>
-		<li><a class="active" href="login_register.php">Login</a></li>
-		<li><a href="login_register.php">Register</a></li>
+		<li><a class="active" href="login_register_dialog.php">Login</a></li>
+		<li><a href="login_register_dialog.php">Register</a></li>
 	</ul>
 	</nav>
 	<footer>
