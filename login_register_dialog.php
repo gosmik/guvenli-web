@@ -29,7 +29,9 @@
 
 	  <script>
 		  $(function() {
-			$( "#tabs" ).tabs();
+			$( "#tabs" ).tabs(function()
+			{
+			});
 		  });
 	  </script>
 	  

@@ -6,7 +6,7 @@
 	}
 	else
 	{
-		echo $_GET["data"]. "is OK you can select it";
+		echo $_GET["data"]. " is OK you can select it";
 	}
 	
 ?>

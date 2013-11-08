@@ -8,6 +8,6 @@ if(mysqli_num_rows(mysqli_query($connect,"SELECT * from user WHERE user_name='" 
 else
 {
 	mysqli_query($connect,"INSERT into user (user_name,user_surname,user_mail,user_password) VALUES ('".$_POST['username']."', '".$_POST['surname']."', '".$_POST['mail']."', '".$_POST['password']."')") or die(mysqli_error($connect));
-	echo "<br> <h2 > Congrulations ! </h2>";
+	echo "<br> <h2 > Congrulations ! ".$_POST['username']."</h2>";
 }
 ?>
