@@ -38,9 +38,9 @@
 	  
 		<script>
 			$(document).ready(function(){
-			  $("input").blur(function(){
-				$.get("phpanswerserver.php?yusuf",function(data,status){
-				  alert("Data: " + data + "\nStatus: " + status);
+			  $("#username").blur(function(){
+				$.get("phpanswerserver.php?data="+$("#username").val(),function(data,status){
+				  alert(data);
 				});
 			  });
 			});
@@ -64,19 +64,19 @@
 					<table border="0">
 						<tr>
 							<td>Name </td>
-							<td><input class="header_01" type = "text" name = "username" /></td>
+							<td><input id="username" class="header_01" type = "text" name = "username" /></td>
 						</tr>			
 						<tr>
 							<td>Surname </td>
-							<td><input class="header_01" type = "text" name = "surname" /></td>
+							<td><input id="name" class="header_01" type = "text" name = "surname" /></td>
 						</tr>	
 						</tr>					
 							<td>Mail </td>
-							<td><input class="header_01" type = "text" name = "mail" /></td>
+							<td><input id="mail" class="header_01" type = "text" name = "mail" /></td>
 						</tr>
 						</tr>					
 							<td>Password</td>
-							<td><input class="header_01" type = "password" name = "password" /></td>
+							<td><input id="password" class="header_01" type = "password" name = "password" /></td>
 						</tr>
 					</table>
 				
