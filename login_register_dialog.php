@@ -29,16 +29,17 @@
 
 	  <script>
 		  $(function() {
-			$( "#tabs" ).tabs(function()
-			{
-			});
+			//$( "#tabs" ).tabs();
+			$( "#tabs" ).function(){
+				alert("deneme");
+			}
 		  });
 		  
 		$(function() 
 		{
 			var pathname = window.location.pathname;
 			var hash = window.location.hash;
-			alert(window.location.hash);
+			//alert(window.location.hash);
 		})
 	  </script>
 	  
