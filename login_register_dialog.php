@@ -33,8 +33,16 @@
 			{
 			});
 		  });
+		  
+		$(function() 
+		{
+			var pathname = window.location.pathname;
+			var hash = window.location.hash;
+			alert(window.location.hash);
+		})
 	  </script>
 	  
+
 		<script>
 			$(document).ready(function(){
 			  $("#username").blur(function(){
@@ -46,7 +54,8 @@
 		</script>
 	   </head>
 	   
-	   <body class = "header_01">
+	   
+	   <body class = "hellobox">
 		
 		<div style="width:500px; margin:auto; padding:auto" id="tabs">
 		  <ul>
@@ -110,6 +119,9 @@
 			  </form>
 		  </div>
 		</div>
+			
+		<li><a href="#tabs-1">Register</a></li>
+		<li><a href="#tabs-2">Login</a></li>
 
 	   </body>
 	</html>
