@@ -18,12 +18,14 @@
 		<h1><?php echo 'Welcome !'; ?> </h1>
 		</h2>
 	</div>
+	
 	<nav>
 	<ul>
-		<li><a class="active" href="login_register_dialog.php">Login</a></li>
-		<li><a href="login_register_dialog.php">Register</a></li>
+		<li><a class="active" href="login_register_dialog.php#login">Login</a></li>
+		<li><a href="login_register_dialog.php#register">Register</a></li>
 	</ul>
 	</nav>
+	
 	<footer>
 	<h4>write something</h4>
 	<p>
@@ -31,5 +33,6 @@
 	</p>
 	</footer>
 </div>
+
 </body>
 </html>
