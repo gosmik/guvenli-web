@@ -5,20 +5,20 @@
 	   <head>
 	      <title>Register Page</title>
   
-        <style type="text/css">		
-            .body {
-                      padding-top: 40px;
-                      padding-bottom: 40px;
-                      background-color: #eee;
-                    }
+                <style type="text/css">		
+		.body {
+			  padding-top: 40px;
+			  padding-bottom: 40px;
+			  background-color: #eee;
+			}
 		
-            .header_01 {
+		.header_01 {
             	padding: 0 0 10px 0;
             	margin: 0 0 10px 0;
             	font-size: 16px;
             	color: #fbbc53;
             }
-			.form-signin {
+		.form-signin {
 		  max-width: 330px;
 		  padding: 15px;
 		  margin: 0 0;
@@ -61,42 +61,35 @@
 	  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	  
 	  <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <link href="dist/css/bootstrap.css" rel="stylesheet">
 	<script src="dist/js/bootstrap.js"></script>
 
 
 	  <script>
-		  $(function() {
-			$("#tabs" ).tabs();
-		  });
-		  
-		$(function() 
-		{
-			var pathname = window.location.pathname;
-			var hash = window.location.hash;
-			//alert(window.location.hash);
-			var tab_index=0;
-			if(hash=="#login")
-			{
-				tab_index=1;
-			}	
-			$("#tabs").tabs( "option", "active", tab_index);
-		})
-	  </script>
-	  
+                $(function() 
+		{  
+                    $("#tabs" ).tabs();
 
-		<script>
-			$(document).ready(function(){
-			  $("#username").blur(function(){
-				$.get("register_server.php?data="+$("#username").val(),function(data,status){
-				  alert(data);
-				});
-			  });
-			});
-		</script>
-	   </head>
-	   
-	   <script>
+                    var pathname = window.location.pathname;
+                    var hash = window.location.hash;
+                    //alert(window.location.hash);
+                    var tab_index=0;
+                    if(hash=="#register")
+                    {
+                            tab_index=1;
+                    }	
+                    $("#tabs").tabs( "option", "active", tab_index);
+
+                    if(hash=="#register")
+                    {
+                          $("#username").blur(function(){
+                                $.get("register_server.php?data="+$("#username").val(),function(data,status){
+                                  alert(data);
+                                });
+                          });
+                    }
+		})
+                
                 function mycheck()
                 {
                 var str = "100, 1000 or 10000?";
@@ -105,16 +98,36 @@
                 alert(result);
                 document.getElementById("demo").innerHTML=result;
                 }
-            </script>
+		</script>
+	   </head>
+	   
 	   <body class="body">
-		
+                    
 		<div style="width:400px; margin:auto; padding:auto" id="tabs">
 		  <ul>
-			<li><a href="#tabs-1">Register</a></li>
-			<li><a href="#tabs-2">Login</a></li>
+                        <li><a href="#tabs-1">Login</a></li>
+			<li><a href="#tabs-2">Register</a></li>
+			
 		  </ul>
-
+                    
 		  <div class="container" id="tabs-1">
+			  <form class="form-signin" method = "post" action = "login_server.php">
+				 <div >
+					<h2 class="form-signin-heading">Please sign in</h2>
+
+					<input type="text" class="form-control" name="username" placeholder="User Name" required autofocus>
+					<input type="password" class="form-control" name="password" placeholder="Password" required>
+						
+					<label class="checkbox">
+					<input type="checkbox" value="remember-me"> Remember me
+					</label>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+					
+				 </div>
+			  </form>
+		  </div>
+                    
+		  <div class="container" id="tabs-2">
 			  <!-- post form data to save_to_db.php -->
 			  <form class="form-signin" method = "post" action = "save_to_db.php">
                             <div >
@@ -131,30 +144,7 @@
 			  </form>
 		  </div>
 		  
-		  <div class="container" id="tabs-2">
-			  <form class="form-signin" method = "post" action = "login_server.php">
-				 <div >
-					<h2 class="form-signin-heading">Please sign in</h2>
-
-					<input type="text" class="form-control" name="username" placeholder="User Name" required autofocus>
-					<input type="password" class="form-control" name="password" placeholder="Password" required>
-						
-					<label class="checkbox">
-					<input type="checkbox" value="remember-me"> Remember me
-					</label>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-					
-				 </div>
-			  </form>
-		  </div>
-
 	</div>
-			
-
-	
-		<li><a href="#tabs-1">Register</a></li>
-		<li><a href="#tabs-2">Login</a></li>
-
 	   </body>
 	</html>
 
