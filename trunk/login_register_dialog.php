@@ -67,15 +67,21 @@
 
 	  <script>
 		  $(function() {
-			$("#tabs" ).tabs()
+			$("#tabs" ).tabs();
 		  });
 		  
-		/*$(function() 
+		$(function() 
 		{
 			var pathname = window.location.pathname;
 			var hash = window.location.hash;
 			//alert(window.location.hash);
-		})*/
+			var tab_index=0;
+			if(hash=="#login")
+			{
+				tab_index=1;
+			}	
+			$("#tabs").tabs( "option", "active", tab_index);
+		})
 	  </script>
 	  
 
